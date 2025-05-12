@@ -1,7 +1,4 @@
-FROM docker.io/nginx:alpine
-
-RUN rm -rf /usr/share/nginx/html/*
-
-COPY index.html /sr/share/nginx/html/ 
+FROM nginx:latest
+COPY ./index.html /usr/share/nginx/html/index.html
 
 EXPOSE 8080
